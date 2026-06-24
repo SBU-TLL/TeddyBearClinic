@@ -1,0 +1,12 @@
+# macOS / editor junk
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# logs
+*.log
+PHP_errors.log
