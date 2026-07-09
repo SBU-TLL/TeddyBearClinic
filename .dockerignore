@@ -1,0 +1,38 @@
+# Keep the production image clean and free of dev/VCS/secret material.
+
+# Version control & this build's own files
+.git
+.gitignore
+.dockerignore
+Dockerfile
+
+# Local DDEV development environment + dev-auth mock (never deployed)
+.ddev/
+.vscode/
+
+# Local env / secrets — production uses runtime env vars, not files
+.env
+.env.*
+
+# Secret-bearing backup not used by the running app (still holds OLD Credly keys)
+certificate/credly_bak.php
+
+# Dev / build scripts and source assets not needed at runtime
+getText.py
+say.sh
+raw images/
+# Stray unreferenced duplicate audio ("... copy.wav")
+*copy.wav
+
+# Docs
+*.md
+README*
+
+# OS / editor junk (Finder metadata, AppleDouble resource forks, swap files)
+.DS_Store
+**/.DS_Store
+._*
+**/._*
+Thumbs.db
+*.swp
+*.swo
