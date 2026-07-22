@@ -1,12 +1,10 @@
 # Shibboleth-protect giveYourselfCredit.php. Guarded so Apache does not 500 where
 # mod_shib is absent (e.g. local DDEV); in production mod_shib is loaded so this applies.
-<IfModule mod_shib>
-    <Files "giveYourselfCredit.php">
+<Files "giveYourselfCredit.php">
         AuthType shibboleth
         ShibRequestSetting requireSession 1
         require valid-user
     </Files>
-</IfModule>
 
 # php_flag only works under mod_php (500s under php-fpm). Guard it; local dev sets
 # error display in .ddev/php/dev.ini instead.

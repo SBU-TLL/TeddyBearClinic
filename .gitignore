@@ -10,3 +10,6 @@ Thumbs.db
 # logs
 *.log
 PHP_errors.log
+
+# Runtime certificate roster (not committed)
+certificate/players.csv
