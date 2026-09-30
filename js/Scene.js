@@ -51,7 +51,7 @@ class Scene {
     setupRoom() {
         location.hash = `#${this.roomName}`;
         $("#screen").children().not("#KristiIntro").not("#first_splash").remove();
-
+	$.get( "tracker.php", { name: this.roomName} );
         this.loadRoomImage(this.roomInfo).then(
             () => {
                 this.blur = new Blur();

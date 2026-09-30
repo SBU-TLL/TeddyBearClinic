@@ -8,7 +8,6 @@ $(()=>{
 
     $("#first_splash").on("click", closeSplash);
 
-    $("#KristiIntro").on("click", closeIntro);
 })
 
 function closeSplash(){
@@ -20,6 +19,7 @@ $("#KristiIntro").append($('<video/>',{src:"TBC3.mp4", id:"vid", type: 'video/mp
     $("#KristiIntro").show(1000);
   $('#vid').trigger('play').on('ended',function(){
   $('#vid').hide(500);
+    $("#KristiIntro").on("click", closeIntro);
 	sound = playSound("Welcome_Page.mp3", "bubbleSpeech", () => {$("#KristiIntro").trigger("click")});
     sound.playclip();
     }); 
